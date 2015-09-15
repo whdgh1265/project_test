@@ -14,7 +14,5 @@
 		<c:url value="/user" var="user" />
 		<li><a href="${user}">사용자 정보</a>
 		</li>
-		
-		
 	</body>
 </html>

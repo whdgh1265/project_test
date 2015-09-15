@@ -10,8 +10,8 @@ import day5.jdbc.dao.UsersDao;
 import day5.jdbc.dto.Users;
 
 @Service
-public class UserServiceImpl implements UsersService {
-	private static Logger logger = LoggerFactory.getLogger(UserServiceImpl.class);
+public class UsersServiceImpl implements UsersService {
+	private static Logger logger = LoggerFactory.getLogger(UsersServiceImpl.class);
 
 	@Autowired
 	UsersDao dao;

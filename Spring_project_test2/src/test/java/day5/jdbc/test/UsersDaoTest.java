@@ -25,7 +25,7 @@ import day5.jdbc.dto.Board;
 import day5.jdbc.dto.Users;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/jdbc-config.xml")
+@ContextConfiguration("spring/application-config.xml")
 public class UsersDaoTest {
 	private static Logger logger = LoggerFactory.getLogger(UsersDaoTest.class);
 	

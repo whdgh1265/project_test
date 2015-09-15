@@ -53,7 +53,7 @@ public class ServiceTest {
 	@Test
 	public void testPassById(){
 		Users user = new Users();
-		user.setId("lol6");
+		user.setId("lol7");
 		user.setNickname("lol");
 		user.setPass("123");
 		user.setEmail("every9168@naver.com");
