@@ -11,10 +11,7 @@
 		<title>Welcome</title>
 	</head> 
 	<body>
-		<c:url value="/user" var="user" />
-		<li><a href="${user}">사용자 정보</a>
-		</li>
-		
-		
+		<c:url value="/showMessage.html" var="messageUrl" />
+		<a href="${messageUrl}">Click to enter</a>
 	</body>
 </html>
