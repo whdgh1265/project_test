@@ -23,7 +23,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import day5.jdbc.dao.UsersDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/jdbc-config.xml")
+@ContextConfiguration("/spring/application-config.xml")
 public class DataSourceTest {
 private static Logger logger = LoggerFactory.getLogger(DataSourceTest.class);
 	@Autowired

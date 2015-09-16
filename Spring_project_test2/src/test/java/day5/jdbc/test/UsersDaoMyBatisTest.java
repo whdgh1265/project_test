@@ -15,7 +15,7 @@ import day5.jdbc.dao.UserDaoMyBatis;
 import day5.jdbc.dao.UsersDao;
 import day5.jdbc.dto.Users;
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/jdbc-config.xml")
+@ContextConfiguration("/spring/application-config.xml")
 public class UsersDaoMyBatisTest {
 
 	@Autowired

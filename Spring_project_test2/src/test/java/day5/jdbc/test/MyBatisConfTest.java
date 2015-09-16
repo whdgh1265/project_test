@@ -12,7 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/jdbc-config.xml")
+@ContextConfiguration("/spring/application-config.xml")
 public class MyBatisConfTest {
 
 	@Autowired

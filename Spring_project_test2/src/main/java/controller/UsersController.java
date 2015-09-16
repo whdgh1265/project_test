@@ -4,6 +4,8 @@ import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -25,7 +27,7 @@ import day5.jdbc.dto.Users;
 @SessionAttributes({"userInfo"})
 public class UsersController {
    private static Logger logger = LoggerFactory.getLogger(UsersController.class);
-   @InitBinder
+  /* @InitBinder
    public void bindData(WebDataBinder binder) {
       logger.trace("bindData 호출됨");
       SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd (E)");
@@ -34,11 +36,11 @@ public class UsersController {
       DecimalFormat df = new DecimalFormat("$##,###");
       binder.registerCustomEditor(Long.class, "salary",
             new CustomNumberEditor(Long.class, df, true));
-   }
+   }*/
    
    @InitBinder
    public void checkEssentialField(WebDataBinder binder){
-      binder.setRequiredFields("name","pass","email");
+      binder.setRequiredFields("id","pass","email","nickname");
    }
    
    @ModelAttribute
@@ -53,24 +55,24 @@ public class UsersController {
 
    @RequestMapping(value = "/user", method = RequestMethod.POST)
    public String confirmUserData(Model model, Users userInfo) {
-      logger.trace("userINfo : {}", userInfo);
+      logger.trace("userInfo : {}", userInfo);
       return "confirmuserInfo";
    }
    
-   @RequestMapping(value = "/user_error", method = RequestMethod.POST)
-   public String errorHandling(Model model, Users userInfo, BindingResult result,RedirectAttributes redir/*, HttpSession session*/) {
+   /*@RequestMapping(value = "/user_error", method = RequestMethod.POST)
+   public String errorHandling(Model model, Users userInfo, BindingResult result,RedirectAttributes redir, HttpSession session) {
       if(result.hasErrors()){
          return "userform_error";
       }  
       //redir.addFlashAttribute(userInfo);
       //session.setAttribute("userInfo", userInfo);
       return "redirect:confirmuserInfo";//새로운 request 생성
-   }
+   }*/
    @RequestMapping(value = "/confirmuserInfo", method = RequestMethod.GET)
    public String showUserInfo(Model model) {
       return "confirmuserInfo";
    }
-   @RequestMapping(value = "/user", method = RequestMethod.GET)
+   @RequestMapping(value="/user", method=RequestMethod.GET)
    public String getUserForm(Model model) {
       return "userform";
    }

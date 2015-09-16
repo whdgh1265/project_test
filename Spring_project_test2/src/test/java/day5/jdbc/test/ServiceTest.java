@@ -20,7 +20,7 @@ import day5.jdbc.dto.Users;
 import day5.jdbc.service.UsersService;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("/jdbc-config.xml")
+@ContextConfiguration("/spring/application-config.xml")
 public class ServiceTest {
 	private static Logger logger = LoggerFactory.getLogger(ServiceTest.class);
 	@Autowired
